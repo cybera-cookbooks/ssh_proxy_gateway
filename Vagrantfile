@@ -72,11 +72,12 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision :chef_solo do |chef|
     chef.json = {
-      :mysql => {
-        :server_root_password => 'rootpass',
-        :server_debian_password => 'debpass',
-        :server_repl_password => 'replpass'
-      }
+    	:ssh_proxy_gateway => {
+    		"example-gateway.internal" => {
+    			:gateway => "vagrant@127.0.0.1",
+    			:identity => "/root/.ssh/example.pem"
+    		}
+    	}
     }
 
     chef.run_list = [
