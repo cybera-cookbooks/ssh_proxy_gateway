@@ -1,4 +1,4 @@
-name             'cybera'
+name             'ssh_proxy_gateway'
 maintainer       'Cybera'
 maintainer_email 'devops@cybera.ca'
 license          'All rights reserved'
