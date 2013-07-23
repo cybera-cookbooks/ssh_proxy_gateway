@@ -19,7 +19,6 @@ describe_recipe 'ssh_proxy_gateway::default' do
 	end
 
 	it "creates default ssh config file" do
-		puts "***************: #{`id -un`}"
 		assert_file "/etc/ssh/ssh_config", "root", "root", 0644
 	end
 
