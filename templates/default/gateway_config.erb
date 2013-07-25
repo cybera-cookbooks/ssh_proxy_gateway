@@ -8,4 +8,4 @@ Host *.<%= gateway_name %>
 	StrictHostKeyChecking no
 	ProxyCommand ssh <%= gateway_name %> -W `echo %h | cut -d"." -f1`:%p
 	IdentityFile <%= gateway_config[:identity] %>
-<% end %>
+<% end if node[:ssh_proxy_gateway] %>
