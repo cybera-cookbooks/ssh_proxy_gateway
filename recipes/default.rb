@@ -1,4 +1,5 @@
-cybera_append_template "/etc/ssh/ssh_config" do
+cybera_append_template "gateway_config" do
+	path "/etc/ssh/ssh_config"
 	source "gateway_config.erb"
 	owner "root"
 	group "root"

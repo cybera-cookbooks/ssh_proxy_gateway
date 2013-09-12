@@ -13,7 +13,6 @@ describe_recipe 'ssh_proxy_gateway::default' do
 	end
 
 	after do
-		system "sudo rm /root/.ssh/known_hosts"
 		system "sudo rm /root/.ssh/example.pem*"
 		system "sudo mv /home/vagrant/.ssh/authorized_keys.old /home/vagrant/.ssh/authorized_keys"
 	end
